@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    --hue: 194;
+    --bg-color-light: #092D38;
+    --bg-color-middle: hsl(192, 65%, 7%, 1);
+    --bg-color-dark: rgba(6, 22, 27, 0.50);
+    --bg-button: hsl(195, 91%, 25%, 1);
+    --bt-remove: hsl(355, 91%, 66%, 1)
+}
+body {
+    font-size: 1.6rem;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.sr-only {
+    margin-top: -1px;
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+header {
+    padding: 10rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 1rem; */
+}
+header button {
+    background-color: var(--bg-button);
+    border-radius: .5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 700;
+    padding: 1.2rem 3.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all ease .3s;
+}
+header button img {
+    display: inline-block;
+    line-height: 50%;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+header button:hover svg path {
+    fill: var(--bg-button);
+}
+header button:hover {
+    color: var(--bg-button);
+    background-color: white;
+}
+header input {
+    background-color: var(--bg-color-dark);
+    border: 0;
+    border-radius: .5rem;
+    color: white;
+    padding: 1.6rem;
+    height: 4.8rem;
+    width: 46rem;
+}
+header input:focus {
+    outline: 1px solid var(--bg-button);
+}
+header form {
+    display: flex;
+    gap: 1rem;
+}
+#app {
+    width: clamp(90%, 112rem, 112rem);
+    padding-bottom: 20rem;
+    margin: 0 auto;
+}
+
+.table-container {
+    border: 1px solid var(--bg-button);
+    border-radius: 1.5rem;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    max-height: 65rem;
+}
+table {
+    border-collapse: collapse;
+    color: #E1E1E6;
+    font-size: 2rem;
+    font-weight: 700;
+    overflow: hidden;
+    width: 100%;
+}
+table td {
+    padding: 2rem 2.4rem 2rem 4rem;
+}
+table thead tr {
+    background-color: var(--bg-color-light);
+}
+table thead th {
+    padding: 2rem 4rem;
+    text-align: left;
+}
+table tr {
+    background-color: var(--bg-color-dark);
+}
+table tbody tr:nth-child(even) {
+    background-color: var(--bg-color-middle);
+}
+table tr + tr td {
+    border-top: 1px solid var(--bg-button);
+}
+table tbody img {
+    border-radius: 9999px;
+    height: 5.6rem;
+    width: 5.6rem;
+}
+table tbody a {
+    color: white;
+    text-decoration: none;
+}
+table tbody span {
+    display: block;
+    font-weight: 400;
+    margin-top: .8rem;
+}
+table .profile {
+    display: flex;
+    gap: 1.6rem;
+}
+table .action-remove {
+    color: var(--bt-remove);
+}
+.table-container::-webkit-scrollbar {
+    width: 2.2rem; /* Set the width of the scrollbar */
+  }
+.table-container::-webkit-scrollbar-thumb {
+    background-color: var(--bg-button);
+    border-radius: 1rem;
+    border: .8rem solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+table .no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    min-height: 50rem;
+}
+.no-content h2 {
+    color: #4E5455;
+    font-size: 4rem;
+}
+table .hide {
+    display: none;
+}
+@media (max-width: 112rem) {
+    #app {
+        width: 90%;
+    }
+    header input {
+        width: 100%;
+    }
+}

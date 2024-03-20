@@ -1,0 +1,15 @@
+{
+  "name": "gitfav",
+  "version": "1.0.0",
+  "description": "Bora praticar e se desafiar um pouquinho mais? **💜**",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
